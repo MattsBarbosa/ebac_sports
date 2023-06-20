@@ -2,8 +2,8 @@ import Header from './components/Header'
 import Produtos from './containers/Produtos'
 
 import { GlobalStyle } from './styles'
-import { Provider } from 'react-redux'
-import { store } from './store'
+import { Provider, useSelector } from 'react-redux'
+import { RootReducer, store } from './store'
 
 export type Produto = {
   id: number
@@ -13,6 +13,7 @@ export type Produto = {
 }
 
 function App() {
+  const favoritos = useSelector((state: RootReducer) => state.favoritos.itens)
   return (
     <Provider store={store}>
       <GlobalStyle />

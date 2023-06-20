@@ -30,12 +30,3 @@ const favoritosSlice = createSlice({
 
 export const { favoritar } = favoritosSlice.actions
 export default favoritosSlice.reducer
-
-// function favoritar(produto: Produto) {
-//   if (favoritos.find((p) => p.id === produto.id)) {
-//     const favoritosSemProduto = favoritos.filter((p) => p.id !== produto.id)
-//     setFavoritos(favoritosSemProduto)
-//   } else {
-//     setFavoritos([...favoritos, produto])
-//   }
-// }
